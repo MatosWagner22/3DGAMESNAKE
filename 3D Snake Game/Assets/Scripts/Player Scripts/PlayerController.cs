@@ -125,7 +125,11 @@ public class PlayerController : MonoBehaviour
 
         if (create_Node_At_Tail)
         {
+            create_Node_At_Tail = false;
 
+            GameObject newNode = Instantiate(tailPrefab, nodes[nodes.Count - 1].position, Quaternion.identity);
+            newNode.transform.SetParent(transform, true);
+            nodes.Add(newNode.GetComponent<Rigidbody>());
         }
     }
 
@@ -142,8 +146,10 @@ public class PlayerController : MonoBehaviour
 
     public void SetInputDirection(PlayerDirection dir)
     {
-        if (dir == PlayerDirection.UP && direction == PlayerDirection.DOWN || dir == PlayerDirection.DOWN && direction == PlayerDirection.UP || 
-         dir == PlayerDirection.RIGHT && direction == PlayerDirection.LEFT || dir == PlayerDirection.LEFT && direction == PlayerDirection.RIGHT)
+        if (dir == PlayerDirection.UP && direction == PlayerDirection.DOWN || 
+            dir == PlayerDirection.DOWN && direction == PlayerDirection.UP || 
+            dir == PlayerDirection.RIGHT && direction == PlayerDirection.LEFT || 
+            dir == PlayerDirection.LEFT && direction == PlayerDirection.RIGHT)
         {
             return;
         }
@@ -157,6 +163,20 @@ public class PlayerController : MonoBehaviour
         counter = 0;
         move = false;
         Move();
+    }
+
+    void OnTriggerEnter(Collider target)
+    {
+        if (target.tag == Tags.FRUIT)
+        {
+            target.gameObject.SetActive(false);
+            create_Node_At_Tail = true;
+        }
+
+        if (target.tag == Tags.WALL || target.tag == Tags.BOMB || target.tag == Tags.TAIL)
+        {
+            print("Touches Wall");
+        }
     }
 
 }
