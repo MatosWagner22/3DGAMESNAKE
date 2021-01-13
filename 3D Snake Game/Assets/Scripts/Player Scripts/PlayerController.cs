@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour
             target.gameObject.SetActive(false);
             create_Node_At_Tail = true;
 
-            GameplayController.instance.IncreaseScore();
+            Score.instance.IncreaseScore();
         }
 
         if (target.tag == Tags.WALL || target.tag == Tags.BOMB || target.tag == Tags.TAIL)

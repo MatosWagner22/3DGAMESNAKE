@@ -150,7 +150,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 70475987}
-  - component: {fileID: 70475986}
   m_Layer: 0
   m_Name: Gameplay Controller
   m_TagString: Untagged
@@ -158,22 +157,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &70475986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70475985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec4290be898a8e41961de7795792766, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fruit_PickUp: {fileID: 7357528239800832516, guid: 92c43e48563364f49a70963c4777d5cb,
-    type: 3}
-  bomb_PickUp: {fileID: 1218749385165401446, guid: d1864c563cce836479a51c44f5dde903,
-    type: 3}
 --- !u!4 &70475987
 Transform:
   m_ObjectHideFlags: 0
@@ -943,7 +926,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
