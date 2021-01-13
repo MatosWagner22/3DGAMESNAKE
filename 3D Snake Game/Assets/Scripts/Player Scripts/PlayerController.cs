@@ -173,11 +173,14 @@ public class PlayerController : MonoBehaviour
             create_Node_At_Tail = true;
 
             Score.instance.IncreaseScore();
+            AudioManager.instance.Play_PickUpSound();
         }
 
         if (target.tag == Tags.WALL || target.tag == Tags.BOMB || target.tag == Tags.TAIL)
         {
-            print("Touches Wall");
+            AudioManager.instance.Play_DeadSound();
+            Score.instance.GameOver();
+            Time.timeScale = 0f;
         }
     }
 

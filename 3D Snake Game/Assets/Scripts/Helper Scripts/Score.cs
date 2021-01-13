@@ -38,4 +38,9 @@ public class Score : MonoBehaviour
         scoreCount++;
         score_Text.text = "Score: " + scoreCount;
     }
+
+    public void GameOver()
+    {
+        scoreCount = 0;
+    }
 }

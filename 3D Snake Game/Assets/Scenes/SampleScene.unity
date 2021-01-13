@@ -150,6 +150,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 70475987}
+  - component: {fileID: 70475986}
+  - component: {fileID: 70475988}
   m_Layer: 0
   m_Name: Gameplay Controller
   m_TagString: Untagged
@@ -157,6 +159,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &70475986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70475985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772240bc23bc26e4caa1eb10466a07e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitPickup: {fileID: 7357528239800832516, guid: 92c43e48563364f49a70963c4777d5cb,
+    type: 3}
+  bombPickup: {fileID: 1218749385165401446, guid: d1864c563cce836479a51c44f5dde903,
+    type: 3}
 --- !u!4 &70475987
 Transform:
   m_ObjectHideFlags: 0
@@ -171,6 +189,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &70475988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70475985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4390a2c3235d1647a8613ca964adc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &111480767
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,6 +697,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170984392}
   m_CullTransparentMesh: 0
+--- !u!1 &1235673060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235673062}
+  - component: {fileID: 1235673061}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1235673061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235673060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce3c6e2998793046bb7bbf3d330a3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUp_Sound: {fileID: 8300000, guid: 7fd8588e621bcc640a2cfafb7b7f0a30, type: 3}
+  dead_Sound: {fileID: 8300000, guid: 8099588e327ddab4799491cb40508357, type: 3}
+--- !u!4 &1235673062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235673060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03999996, y: -0.2800001, z: 5.750329}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372784326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1035763994441956, guid: dd30ad9565893564d95e1a6726a873c4,
@@ -822,7 +897,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: 'Score: 0'
 --- !u!222 &1790096312
 CanvasRenderer:
   m_ObjectHideFlags: 0
