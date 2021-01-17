@@ -172,14 +172,14 @@ public class PlayerController : MonoBehaviour
             target.gameObject.SetActive(false);
             create_Node_At_Tail = true;
 
-            Score.instance.IncreaseScore();
+            Game.instance.IncreaseScore();
             AudioManager.instance.Play_PickUpSound();
         }
 
         if (target.tag == Tags.WALL || target.tag == Tags.BOMB || target.tag == Tags.TAIL)
         {
             AudioManager.instance.Play_DeadSound();
-            Score.instance.GameOver();
+            Game.instance.GameOver();
             Time.timeScale = 0f;
         }
     }
